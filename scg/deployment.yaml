@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: scg-app
-        image: http://192.168.0.72:30002/greengram/scg:5
+        image: http://192.168.0.74:30002/greengram/scg:5
         ports:
         - containerPort: 8080
