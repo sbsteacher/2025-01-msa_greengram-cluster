@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scg-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: scg-app
+  template:
+    metadata:
+      labels:
+        app: scg-app
+    spec:
+      containers:
+      - name: scg-app
+        image: http://192.168.0.72:30002/greengram/scg:1
+        ports:
+        - containerPort: 8080
