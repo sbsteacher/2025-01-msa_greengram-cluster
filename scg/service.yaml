@@ -2,11 +2,13 @@ apiVersion: v1
 kind: Service
 metadata:
   name: scg-app-service
+  namespace: greengram
 spec:
   selector:
     app: scg-app
   ports:
-    - protocol: TCP
+    - name: http
+      protocol: TCP
       port: 8080
       targetPort: 8080
       nodePort: 8080
