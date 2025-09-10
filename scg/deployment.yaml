@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: scg-app
-        image: harbor.greenart.n-e.kr/greengram/scg:37
+        image: harbor.greenart.n-e.kr/greengram/scg:38
         ports:
         - containerPort: 8080
       imagePullSecrets:
