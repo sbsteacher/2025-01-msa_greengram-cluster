@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: greengram-user-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: greengram-user
+  template:
+    metadata:
+      labels:
+        app: greengram-user
+    spec:
+      containers:
+      - name: greengram-user
+        image: harbor.greenart.n-e.kr/greengram/user:1
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: harbor-creds
