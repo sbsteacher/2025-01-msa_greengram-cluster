@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: greengram-user
+  namespace: greengram
+  labels:
+    app: greengram-user
+spec:
+  selector:
+    app: greengram-user
+  ports:
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: 8080
+  type: ClusterIP   
