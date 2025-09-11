@@ -19,3 +19,4 @@ spec:
         - containerPort: 8080
       imagePullSecrets:
       - name: harbor-creds
+      serviceAccountName: spring-gateway
