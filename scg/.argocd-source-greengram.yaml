@@ -1,0 +1,3 @@
+kustomize:
+  images:
+  - harbor.greenart.n-e.kr/greengram/scg:39
