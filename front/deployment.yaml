@@ -16,7 +16,7 @@ spec:
       - name: front-app
         image: harbor.greenart.n-e.kr/greengram/front:5
         ports:
-        - containerPort: 8080
+        - containerPort: 80
       imagePullSecrets:
       - name: harbor-creds
       serviceAccountName: spring-gateway
