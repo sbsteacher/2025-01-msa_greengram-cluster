@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: greengram-like-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: greengram-like
+  template:
+    metadata:
+      labels:
+        app: greengram-like
+    spec:
+      containers:
+      - name: greengram-like
+        image: harbor.greenart.n-e.kr/greengram/like:1
+        ports:
+          - containerPort: 8080     
+      imagePullSecrets:
+      - name: harbor-creds
+      serviceAccountName: spring-gateway
