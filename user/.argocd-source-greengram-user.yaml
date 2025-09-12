@@ -1,3 +1,3 @@
 kustomize:
   images:
-  - harbor.greenart.n-e.kr/greengram/user:3
+  - harbor.greenart.n-e.kr/greengram/user:4
